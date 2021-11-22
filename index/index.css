@@ -1,0 +1,129 @@
+body {
+    font-family: 'Montserrat', sans-serif !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url("../assets/img/Untitled-1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* FIM GLOBAL */
+
+.container {
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
+
+/* NAVBAR */
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #595959;
+    z-index: 1000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header .container {
+    display: flex;
+    height: 65px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img_header img {
+    height: 30px;
+    cursor: pointer;
+}
+
+.nav {
+    float: right;
+}
+
+.nav a {
+    position: relative;
+    font-size: 15px;
+    color: #a0a0a0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+
+.nav a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav a:hover{
+    width: 100%;
+}
+
+.nav li {
+    display: unset;
+    padding: 0px 0px 0px 10px;
+}
+
+.nav ul {
+    float: left;
+    margin-right: 10px;
+}
+
+.sectionWelcome {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner {
+
+    background-color: #5959599b;
+    padding: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    border: 2px solid red;
+
+}
+.div_texto{
+    width: 50vh;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 13pt;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.div_texto h1{
+    margin: 0 0 3%;
+    font-size: 13pt;
+    font-size: 30pt;
+}
+
+.img_times{
+    width: 36vw;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+
