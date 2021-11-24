@@ -9,6 +9,19 @@ body {
 html {
     scroll-behavior: smooth;
 }
+/* SCROLL */
+*::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #595959;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #595959;
+
+  }
 
 
 /* FIM GLOBAL */
