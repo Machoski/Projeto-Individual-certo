@@ -128,4 +128,43 @@ html {
     color: #FFD966;
 }
 
+/* SCROLL */
+*::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #595959;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #595959;
 
+  }
+  /* FIM DA SCROLL*/
+
+  .section_quemsomos {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+  .div_texto2{
+
+    width: 80%;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    font-size: 22pt;
+    color: whitesmoke;
+    font-weight: bold;
+    align-items: center;
+}
+  
+  .div_texto2 span{
+
+    color: #FFD966;
+}
