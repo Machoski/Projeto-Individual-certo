@@ -4,6 +4,9 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 /* SCROLL */
 *::-webkit-scrollbar {
     width: 8px;
@@ -19,11 +22,6 @@ body {
   }
 
 
-html {
-    scroll-behavior: smooth;
-}
-
-
 /* FIM GLOBAL */
 
 .container {
@@ -35,13 +33,14 @@ html {
 /* NAVBAR */
 
 .header {
-    width: 100%;
+    width: 90%;
     position: fixed;
     top: 0;
     left: 0;
     background-color: #595959;
     z-index: 1000;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 0 5%;
 }
 
 .header .container {
@@ -88,4 +87,58 @@ html {
 .nav ul {
     float: left;
     margin-right: 10px;
+}
+.banner {
+
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('../assets/img/Untitled-1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 60%;
+    /* background: linear-gradient() ; */
+    border-radius: 2vw;
+    box-shadow: 1vh 4vh 3vh 1vh #595959b0;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.barra {
+    height: 50%;
+    border: 1px solid #595959;
+    margin: 0 8%;
+}
+
+
+input{
+    background-color: transparent;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: #595959;
+    padding: 5% 5% 5% 5%;
+    font-size: 2vh;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 2vh;
+    height: 2.4%;
 }

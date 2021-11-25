@@ -28,3 +28,84 @@
         </div>
     </div>
 
+    <div class="container">
+        <div class="banner">
+            <div class="boxes">
+                <div class="box_cadastro">
+                    <p>Cadastre-se na</p>
+                    <span class="img"><img onclick="exibir_cadastro()" src="../assets/img/logo2.png"></a>
+                        <div class="inputs" id="cadastro_inputs" style="display: none;">
+                            <input type="email" id="ipt_email" placeholder="E-mail válido"><br>
+                            <input type="text" id="nome" placeholder="Nome Completo"><br>
+                            <input type="password" id="ipt_senha" placeholder="Senha"><br>
+                            <input type="password" id="ipt_conf_senha" placeholder="Confirme a senha"><br>
+                            <select name="times" id="sel_times">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                </div>
+                <div class="barra"></div>
+                <div class="box_login">
+                    <p>Faça seu login</p>
+                    <span class="img"><img onclick="exibir_login()" src="../assets/img/logo2.png"></a>
+                        <div class="inputs" id="login_inputs" style="display: none;">
+                            <input type="email" id="ipt_email" placeholder="E-mail válido"><br>
+                            <input type="password" id="ipt_senha" placeholder="Senha"><br>
+                            <select name="times" id="sel_times">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                </div>
+            </div>
+        </div>
+<script>
+    function exibir_cadastro(){
+        cadastro_inputs.style.display="block";
+        login_inputs.style.display="none"
+    }
+
+    function exibir_login(){
+        cadastro_inputs.style.display="none";
+        login_inputs.style.display="block"
+    }
+</script>
