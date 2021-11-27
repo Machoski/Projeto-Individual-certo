@@ -142,3 +142,27 @@ input{
     margin-bottom: 2vh;
     height: 2.4%;
 }
+
+.box_login .sel_times2{
+    background-color: #ffd9663d;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: #FFD966;
+    padding: 5% 5% 5% 5%;
+    font-size: 2vh;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 2vh;
+    height: 2.4%;
+}
+
+.box_cadastro .sel_times1{
+    background-color: #ffd9663d;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: #FFD966;
+    padding: 5% 5% 5% 5%;
+    font-size: 2vh;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 2vh;
+    height: 2.4%;
+}
