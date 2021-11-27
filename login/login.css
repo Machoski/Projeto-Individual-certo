@@ -132,10 +132,10 @@ html {
 
 
 input{
-    background-color: transparent;
+    background-color: #ffd9663d;
     border-radius: 2px;
     border-style: solid;
-    border-color: #595959;
+    border-color: #FFD966;
     padding: 5% 5% 5% 5%;
     font-size: 2vh;
     font-family: 'Montserrat', sans-serif;
