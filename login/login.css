@@ -132,7 +132,7 @@ html {
 
 
 input{
-    background-color: #ffd9663d;
+    background-color: rgba(245, 245, 245, 0.26);
     border-radius: 2px;
     border-style: solid;
     border-color: #FFD966;
@@ -144,7 +144,7 @@ input{
 }
 
 .box_login .sel_times2{
-    background-color: #ffd9663d;
+    background-color: rgba(245, 245, 245, 0.26);
     border-radius: 2px;
     border-style: solid;
     border-color: #FFD966;
@@ -156,7 +156,7 @@ input{
 }
 
 .box_cadastro .sel_times1{
-    background-color: #ffd9663d;
+    background-color: rgba(245, 245, 245, 0.26);
     border-radius: 2px;
     border-style: solid;
     border-color: #FFD966;
