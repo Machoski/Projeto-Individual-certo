@@ -148,7 +148,7 @@ input{
     border-radius: 2px;
     border-style: solid;
     border-color: #FFD966;
-    padding: 5% 5% 5% 5%;
+    padding: 5% 5% 3% 12%;
     font-size: 2vh;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 2vh;
@@ -160,9 +160,74 @@ input{
     border-radius: 2px;
     border-style: solid;
     border-color: #FFD966;
-    padding: 5% 5% 5% 5%;
+    padding: 5% 5% 3% 12%;
     font-size: 2vh;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 2vh;
     height: 2.4%;
+}
+.botao_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao_login {
+    margin-top: -1vh;
+    margin-bottom: 0.5vh;
+    font-size: 3vh;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFD966;
+    background-color: rgba(245, 245, 245, 0.26);
+    border-style: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 0 2vh;
+}
+
+/* esse comando estiliza o botão de login, quando passamos o mouse por cima */
+.botao_login:hover {
+    background-color: #FFD966;
+    text-decoration: underline;
+}
+
+.botao_icon {
+    background-color: #FFD966;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6.5vh;
+    height: 6.5vh;
+    margin-left: 2vh;
+    border-radius: 5px;
+}
+
+.botao_icon:hover {
+    background-color: #FEAA00;
+}
+
+.botao_icon img {
+    width: 3.5vh;
+}
+.botao_cadastro {
+    margin-top: -1vh;
+    margin-bottom: 0.5vh;
+    font-size: 3vh;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFD966;
+    background-color: rgba(245, 245, 245, 0.26);
+    border-style: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 0 2vh;
+}
+
+/* esse comando estiliza o botão de login, quando passamos o mouse por cima */
+.botao_cadastro:hover {
+    background-color: #FEAA00;
+    text-decoration: underline;
 }

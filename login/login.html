@@ -35,10 +35,10 @@
                     <p>Cadastre-se na</p>
                     <span class="img"><img onclick="exibir_cadastro()" src="../assets/img/logo2.png"></a>
                         <div class="inputs" id="cadastro_inputs" style="display: none;">
-                            <input type="email" id="ipt_email" placeholder="E-mail válido"><br>
-                            <input type="text" id="nome" placeholder="Nome Completo"><br>
-                            <input type="password" id="ipt_senha" placeholder="Senha"><br>
-                            <input type="password" id="ipt_conf_senha" placeholder="Confirme a senha"><br>
+                            <input type="email" id="input_email" placeholder="E-mail válido"><br>
+                            <input type="text" id="input_nome" placeholder="Nome Completo"><br>
+                            <input type="password" id="input_senha" placeholder="Senha"><br>
+                            <input type="password" id="input_conf_senha" placeholder="Confirme a senha"><br>
                             <select name="times" id="sel_times" class="sel_times1">
                                 <option value="Selecione">Selecione um time...</option>
                                 <option value="Athletico_Paranaense">Athetico Paranaense</option>
@@ -59,6 +59,14 @@
                                 <option value="Sport">Sport</option>
                                 <option value="Vasco">Vasco</option>
                             </select>
+                            <a class="botao_container">
+                                <button class="botao_cadastro" onclick="cadastro()">
+                                    Cadastre-se
+                                    <div class="botao_icon">
+                                        <img src="../assets/img/arrow.png.svg" alt="">
+                                    </div>
+                                </button>
+                            </a><br>
                         </div>
                 </div>
                 <div class="barra"></div>
@@ -66,8 +74,8 @@
                     <p>Faça seu login</p>
                     <span class="img"><img onclick="exibir_login()" src="../assets/img/logo2.png"></a>
                         <div class="inputs" id="login_inputs" style="display: none;">
-                            <input type="email" id="ipt_email" placeholder="E-mail válido"><br>
-                            <input type="password" id="ipt_senha" placeholder="Senha"><br>
+                            <input type="email" id="input_email" placeholder="E-mail válido"><br>
+                            <input type="password" id="inpt_senha" placeholder="Senha"><br>
                             <select name="times" id="sel_times" class="sel_times2">
                                 <option value="Selecione">Selecione um time...</option>
                                 <option value="Athletico_Paranaense">Athetico Paranaense</option>
@@ -88,6 +96,14 @@
                                 <option value="Sport">Sport</option>
                                 <option value="Vasco">Vasco</option>
                             </select>
+                            <a class="botao_container">
+                                <button class="botao_login" onclick="login()">
+                                    Login
+                                    <div class="botao_icon">
+                                        <img src="../assets/img/arrow.png.svg" alt="">
+                                    </div>
+                                </button>
+                            </a><br>
                         </div>
                 </div>
             </div>
@@ -102,4 +118,65 @@
         cadastro_inputs.style.display="none";
         login_inputs.style.display="block"
     }
+    function login() {
+        if (input_email.value == "" || input_senha.value == "") {
+            alert("Insira seus dados!")
+        } else if (input_email.value.includes("@") && input_email.value.includes(".com")) {
+            alert("Login bem sucedido!");
+            window.location.assign("../Dashboard/home/home.html")
+        } else {
+            alert("Verifique se seu e-mail ou sua senha estão corretos.");
+        }
+    }
+    function cadastrar() {
+    // aguardar();
+
+    var nomeVar = input_nome.value;
+    var emailVar = input_email.value;
+    var senhaVar = input_senha.value;
+    var confirmacaoSenhaVar = confirmacao_senha_input.value;
+
+    if (input_email.value == "" || input_senha.value == "" || input_cpf.value == "" || input_nome.value == "") {
+        alert("Insira seus dados!")
+    } else if (input_email.value.includes("@") && input_email.value.includes(".com") && input_senha.value.length >= 2 && input_nome.value.includes(" ")) {
+     if (input_email.value == "@.com") {
+            alert("Insira um email válido!");
+        } else {
+            alert("Cadastro bem sucedido!");
+            alert("Agora faça seu login!")
+            window.location.assign("2ª Sprint/Site Institucional/Login/login.html")
+        }
+    }
+
+    fetch('/usuarios/cadastrar', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            nomeServer: nomeVar,
+            emailServer: emailVar,
+            senhaServer: senhaVar,
+            confirmacaoSenhaServer: confirmacaoSenhaVar
+        })
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            window.alert("Cadastro realizado com sucesso!");
+            window.location = "login.html";
+            limparFormulario();
+            finalizarAguardar();
+        } else {
+            throw ("Houve um erro ao tentar realizar o cadastro!");
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
+    });
+
+    return false;
+}
+    
 </script>
