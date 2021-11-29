@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MachoskiSports</title>
+
+    <link rel="icon" href="/img/logo2.png">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div id="navbar" class="header">
+        <div class="container">
+            <div class="img_header">
+                <a href="home.html"><img src="img/icon.png"></a>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="home.html">Início</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="banner">
+            <div class="boxes">
+                <div class="box_cadastro" onclick="exibir_cadastro()">
+                    <p>Cadastre-se na</p>
+                    <span class="img"><img src="/img/logo2.png"></a>
+                        <div class="inputs" id="cadastro_inputs" style="display: none;">
+                            <input type="email" id="input_email" placeholder="E-mail válido"><br>
+                            <input type="text" id="input_nome" placeholder="Nome Completo"><br>
+                            <input type="password" id="input_senha" placeholder="Senha"><br>
+                            <input type="password" id="input_conf_senha" placeholder="Confirme a senha"><br>
+                            <select name="times" id="sel_times" class="sel_times1">
+                                <option value="null">Selecione um time...</option>
+                                <option value="1">Athetico Paranaense</option>
+                                <option value="2">Atlético Mineiro</option>
+                                <option value="3">Bahia</option>
+                                <option value="4">Flamengo</option>
+                                <option value="5">Fluminense</option>
+                                <option value="6">Botafogo</option>
+                                <option value="7">Ceara</option>
+                                <option value="8">Corinthians</option>
+                                <option value="9 Paulo">São Paulo</option>
+                                <option value="10">Palmeiras</option>
+                                <option value="11">Fortaleza</option>
+                                <option value="12">Internacional</option>
+                                <option value="13">Grêmio</option>
+                                <option value="14">RB Bragantino</option>
+                                <option value="15">Santos</option>
+                                <option value="16">Sport</option>
+                                <option value="17">Vasco</option>
+                            </select>
+                            <a class="botao_container">
+                                <button class="botao_cadastro" onclick="cadastro()">
+                                    Cadastre-se
+                                    <div class="botao_icon">
+                                        <img src="/img/arrow.png.svg" alt="">
+                                    </div>
+                                </button>
+                            </a><br>
+                        </div>
+                </div>
+                <div class="barra"></div>
+                <div class="box_login" onclick="exibir_login()">
+                    <p>Faça seu login</p>
+                    <span class="img"><img src="/img/logo2.png"></a>
+                        <div class="inputs" id="login_inputs" style="display: none;">
+                            <input type="email" id="input_email" placeholder="E-mail válido"><br>
+                            <input type="password" id="inpt_senha" placeholder="Senha"><br>
+                            <select name="times" id="sel_times" class="sel_times2">
+                                <option value="null">Selecione um time...</option>
+                                <option value="1">Athetico Paranaense</option>
+                                <option value="2">Atlético Mineiro</option>
+                                <option value="3">Bahia</option>
+                                <option value="4">Flamengo</option>
+                                <option value="5">Fluminense</option>
+                                <option value="6">Botafogo</option>
+                                <option value="7">Ceara</option>
+                                <option value="8">Corinthians</option>
+                                <option value="9">São Paulo</option>
+                                <option value="10">Palmeiras</option>
+                                <option value="11">Fortaleza</option>
+                                <option value="12">Internacional</option>
+                                <option value="13">Grêmio</option>
+                                <option value="14">RB Bragantino</option>
+                                <option value="15">Santos</option>
+                                <option value="16">Sport</option>
+                                <option value="17">Vasco</option>
+                            </select>
+                            <a class="botao_container">
+                                <button class="botao_login" onclick="login()">
+                                    Login
+                                    <div class="botao_icon">
+                                        <img src="/img/arrow.png.svg" alt="">
+                                    </div>
+                                </button>
+                            </a><br>
+                        </div>
+                </div>
+            </div>
+        </div>
+<script>
+
+    function exibir_cadastro(){
+        cadastro_inputs.style.display="block";
+        login_inputs.style.display="none"
+        login_inputs.style.transition = `0.5s`;
+    }
+
+    function exibir_login(){
+        cadastro_inputs.style.display="none";
+        login_inputs.style.display="block"
+        login_inputs.style.transition = `0.5s`;
+    }
+    function login() {
+        if (input_email.value == "" || input_senha.value == "") {
+            alert("Insira seus dados!")
+        } else if (input_email.value.includes("@") && input_email.value.includes(".com")) {
+            alert("Login bem sucedido!");
+            window.location.assign("../Dashboard/home/home.html")
+        } else {
+            alert("Verifique se seu e-mail ou sua senha estão corretos.");
+        }
+    }
+    function cadastrar() {
+    // aguardar();
+
+    var nomeVar = input_nome.value;
+    var emailVar = input_email.value;
+    var senhaVar = input_senha.value;
+    var confirmacaoSenhaVar = input_conf_senha.value;
+
+    if (input_email.value == "" || input_senha.value == "" || input_nome.value == "") {
+        alert("Insira seus dados!")
+    } else if (input_email.value.includes("@") && input_email.value.includes(".com") && input_senha.value.length >= 2) {
+     if (input_email.value == "@.com") {
+            alert("Insira um email válido!");
+        } else {
+            alert("Cadastro bem sucedido!");
+            alert("Agora faça seu login!")
+            window.location.assign("2ª Sprint/Site Institucional/Login/login.html")
+        }
+    }
+
+    fetch('/usuarios/cadastrar', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            nomeServer: nomeVar,
+            emailServer: emailVar,
+            senhaServer: senhaVar,
+            confirmacaoSenhaServer: confirmacaoSenhaVar
+        })
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            window.alert("Cadastro realizado com sucesso!");
+            window.location = "login.html";
+            limparFormulario();
+            finalizarAguardar();
+        } else {
+            throw ("Houve um erro ao tentar realizar o cadastro!");
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
+    });
+
+    return false;
+}
+    
+</script>
